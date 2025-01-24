@@ -1,8 +1,6 @@
 services:
   api-server:
-    build:
-      context: .
-      dockerfile: ./Dockerfile-prod # dockerfile을 명시해준다
+    build: .
     ports:
       - 8080:8080
     depends_on:

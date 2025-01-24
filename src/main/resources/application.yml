@@ -2,7 +2,7 @@ spring:
   protiles:
     default: local
   datasource:
-    url: jdbc:mysql://localhost:3306/mydb
+    url: jdbc:mysql://host.docker.internal:3306/mydb # 도커 이미지로 띄우기 때문에 도커를 향하도록 수정
     username: root
     password: password
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -12,7 +12,7 @@ spring:
     show-sql: true
   data:
     redis:
-      host: localhost
+      host: cache-server # compose.yml 에서 설정한 이름과 동일하게 설정
       port: 6379
 
 logging:
