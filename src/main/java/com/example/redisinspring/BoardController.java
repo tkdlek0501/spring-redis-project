@@ -17,6 +17,7 @@ public class BoardController {
         this.boardService = boardService;
     }
 
+    // ttt
     @GetMapping
     public List<Board> getBoards(
             @RequestParam(defaultValue = "1") int page,
